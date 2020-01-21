@@ -1,0 +1,27 @@
+runmode: debug
+addr: :8080
+name: apiserver
+url: http://127.0.0.1:8080
+max_ping_count: 10
+
+
+log:
+  log.writers: file,stdout
+  log.logger_level: DEBUG
+  log.logger_file: log/apiserver.log
+  log.log_format_text: false
+  log.rolling_policy: size
+  log.log_rotate_date: 1
+  log.log_rotate_size: 1
+  log.log_backup_count: 7
+
+db:
+  name: db_apiserver
+  addr: 47.95.242.245:3306
+  username: ethan
+  password: '@#$LIcheng27'
+docker_db:
+  name: db_apiserver
+  addr: 47.95.242.245:3306
+  username: ethan
+  password: '@#$LIcheng27'
